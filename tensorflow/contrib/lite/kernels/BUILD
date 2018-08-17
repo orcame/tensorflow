@@ -182,6 +182,7 @@ cc_library(
         "register.cc",
         "reshape.cc",
         "resize_bilinear.cc",
+        "resize_nearest_neighbor.cc",
         "select.cc",
         "shape.cc",
         "skip_gram.cc",

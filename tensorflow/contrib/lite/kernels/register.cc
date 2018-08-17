@@ -23,6 +23,7 @@ namespace custom {
 TfLiteRegistration* Register_AUDIO_SPECTROGRAM();
 TfLiteRegistration* Register_MFCC();
 TfLiteRegistration* Register_DETECTION_POSTPROCESS();
+TfLiteRegistration* Register_RESIZE_NEAREST_NEIGHBOR();
 
 }  // namespace custom
 
@@ -199,6 +200,8 @@ BuiltinOpResolver::BuiltinOpResolver() {
             tflite::ops::custom::Register_AUDIO_SPECTROGRAM());
   AddCustom("TFLite_Detection_PostProcess",
             tflite::ops::custom::Register_DETECTION_POSTPROCESS());
+  AddCustom("ResizeNearestNeighbor",
+            tflite::ops::custom::Register_RESIZE_NEAREST_NEIGHBOR());
 }
 
 }  // namespace builtin
